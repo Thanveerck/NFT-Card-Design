@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fc-text: hsl(215, 51%, 70%);
+  --fc-cyan: hsl(178, 100%, 50%);
+  --fc-white: hsl(0, 0%, 100%);
+
+  --color-main-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-hr: hsl(215, 32%, 27%);
+  --ff: "Outfit", sans-serif;
+}
+
+body {
+  background: var(--color-main-bg);
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 370px;
+  background: var(--color-card-bg);
+  border-radius: 0.7em;
+  box-shadow: 3px 3px 2rem;
+}
+
+.wrapper {
+  margin: 1.5rem;
+}
+
+.wrapper .hero-img {
+  width: 100%;
+  border-radius: 0.7em;
+}
+
+.wrapper > h2 {
+  color: var(--fc-white);
+  font-size: 1.3rem;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: 250ms ease-out;
+}
+
+.wrapper > h2:hover {
+  color: var(--fc-cyan);
+}
+
+.wrapper > p {
+  color: var(--fc-text);
+  width: max(80%, 10rem);
+  margin-top: 1em;
+}
+
+.icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+
+.eth {
+  display: inline-flex;
+}
+
+.eth span {
+  color: var(--fc-cyan);
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  font-weight: 600;
+}
+
+.clock {
+  display: inline-flex;
+}
+.clock img {
+  height: 1.2em;
+}
+.clock span {
+  color: var(--fc-text);
+  margin-left: 0.5em;
+}
+
+.line {
+  margin: 1.5em 0;
+  border-bottom: 3px solid var(--color-hr);
+  display: block;
+}
+
+.author > img {
+  width: max(2.2em, 2vw);
+  border: 2px solid var(--fc-text);
+  border-radius: 50%;
+}
+
+.author {
+  display: inline-flex;
+  margin-bottom: 1em;
+}
+.hero-name {
+  color: var(--fc-text);
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.hero-name > span {
+  color: var(--fc-white);
+  cursor: pointer;
+  transition: 250ms ease-out;
+}
+.hero-name > span:hover {
+  color: var(--fc-cyan);
+}
+
+.primary {
+  position: relative;
+  cursor: pointer;
+}
+.secondary:hover {
+  opacity: 0.7;
+}
+
+.secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background: var(--fc-cyan);
+  opacity: 0;
+  border-radius: 0.7em;
+  transition: opacity 350ms ease-out;
+}
+
+.secondary > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
